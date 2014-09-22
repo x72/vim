@@ -28,6 +28,12 @@ set backspace=2
 " 允许backspace和光标键跨越行边界
 set whichwrap+=<,>,h,l
 
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'vim-scripts/FuzzyFinder'
+Bundle 'vim-scripts/L9'
+
 if &term=="xterm"
   set mouse=a
   if has("terminfo")

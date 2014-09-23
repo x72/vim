@@ -5,6 +5,17 @@ version 6.0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "不兼容vi
 set nocompatible
+
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'Fuzzyfinder'
+Bundle 'L9'
+
+filetype plugin indent on
+
 " 自动缩进
 "set autoindent
 " C语言方式缩进
@@ -27,12 +38,6 @@ set softtabstop=4
 set backspace=2
 " 允许backspace和光标键跨越行边界
 set whichwrap+=<,>,h,l
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'vim-scripts/FuzzyFinder'
-Bundle 'vim-scripts/L9'
 
 if &term=="xterm"
   set mouse=a

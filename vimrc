@@ -8,12 +8,17 @@ set nocompatible
 
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/vundle.vim
+call vundle#begin()
 
-Bundle 'Fuzzyfinder'
-Bundle 'L9'
+Plugin 'gmarik/Vundle.vim'
 
+Plugin 'taglist.vim'
+Plugin 'Emmet.vim'
+Plugin 'FuzzyFinder'
+Plugin 'L9'
+
+call vundle#end()
 filetype plugin indent on
 
 " 自动缩进
@@ -119,8 +124,6 @@ if has("gui_running")
   set guioptions-=r
   " 隐藏底部滚动条
   set guioptions-=b
-  " 隐藏Tab栏
-  set showtabline=0
 
   " 设置中英文字体
   set guifont=Menlo:h10.5
@@ -135,6 +138,8 @@ if has("gui_running")
 endif
 
 
+" 隐藏Tab栏
+set showtabline=0
 " 禁止备份
 set nobackup
 " 禁止生成临时文件
